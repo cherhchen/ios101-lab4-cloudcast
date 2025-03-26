@@ -7,14 +7,6 @@
 
 import Foundation
 
-struct WeatherAPIResponse: Decodable {
-    let currentWeather: CurrentWeatherForecast
-    
-    private enum CodingKeys: String, CodingKey {
-        case currentWeather = "current_weather"
-    }
-}
-
 class WeatherForecastService {
   static func fetchForecast(latitude: Double,
                             longitude: Double,
